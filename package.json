@@ -1,0 +1,44 @@
+{
+    "name": "softline",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development webpack serve --open --mode development",
+        "build": "cross-env NODE_ENV=production webpack --mode production",
+        "lint": "eslint . --ext .js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/atcherdsd/Softline.git"
+    },
+    "keywords": [],
+    "author": "atcherdsd",
+    "license": "ISC",
+    "type": "module",
+    "bugs": {
+        "url": "https://github.com/atcherdsd/Softline/issues"
+    },
+    "homepage": "https://github.com/atcherdsd/Softline#readme",
+    "devDependencies": {
+        "clean-webpack-plugin": "^4.0.0",
+        "copy-webpack-plugin": "^13.0.0",
+        "cross-env": "^7.0.3",
+        "css-loader": "^7.1.2",
+        "eslint": "^9.24.0",
+        "eslint-config-prettier": "^10.1.2",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-prettier": "^5.2.6",
+        "eslint-webpack-plugin": "^5.0.0",
+        "file-loader": "^6.2.0",
+        "html-webpack-plugin": "^5.6.3",
+        "mini-css-extract-plugin": "^2.9.2",
+        "prettier": "^3.5.3",
+        "sass": "^1.86.3",
+        "sass-loader": "^16.0.5",
+        "style-loader": "^4.0.0",
+        "webpack": "^5.99.5",
+        "webpack-cli": "^6.0.1",
+        "webpack-dev-server": "^5.2.1"
+    }
+}

@@ -1,0 +1,28 @@
+@use "./base/reset";
+@use "./base/fonts" as *;
+
+html, 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-proxima-family;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main {
+    position: relative;
+    flex: 1;
+}

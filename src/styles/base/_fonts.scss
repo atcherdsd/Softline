@@ -1,0 +1,26 @@
+@use 'sass:list';
+
+$font-proxima-name: "ProximaNovaCondensed";
+$font-proxima-family: $font-proxima-name, Arial, sans-serif;
+
+$fontFiles: (
+    "proximanovacond_regular": (400, 'ttf'),
+    "proximanovacond_bold": (700, 'ttf'),
+    "proximanovacond_boldit": (700, 'otf'),
+    "proximanovacond_black": (900, 'otf'),
+    "proximanovacond_blackit": (900, 'otf'),
+);
+
+@each $fileName, $details in $fontFiles {
+    $weight: list.nth($details, 1);
+    $format: list.nth($details, 2);
+
+    @font-face {
+        font-family: $font-proxima-name;
+        src: 
+            url('../assets/fonts/#{$fileName}.#{$format}') format('#{$format}');
+        font-weight: $weight;
+        font-style: normal;
+        font-display: swap;
+    }
+}
