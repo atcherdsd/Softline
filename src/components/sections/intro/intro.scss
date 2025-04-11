@@ -1,4 +1,4 @@
-@use "../../styles/abstracts/mixins" as *;
+@use "../../../styles/abstracts/mixins" as *;
 
 .intro {
     display: flex;
@@ -6,7 +6,7 @@
     row-gap: 30px;
     text-align: center;
 
-    @include section-padding(79px, 66px, 0, 66px);
+    @include section-padding(79px, 66px, 0, 74px);
 
     @media (max-width: 768px) {
         row-gap: 10px;
