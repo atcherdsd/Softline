@@ -1,5 +1,9 @@
 @use "./base/reset";
 @use "./base/fonts" as *;
+@use "./base/colors" as *;
+
+@use '../components/header/header.scss';
+@use '../components/intro/intro.scss';
 
 html, 
 body {
@@ -16,13 +20,24 @@ body {
     font-family: $font-proxima-family;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--white);
+    color: var(--black);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-.main {
+header,
+main {
     position: relative;
+    width: 100%;
+    padding: 0 15px;
+}
+
+main {
     flex: 1;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
 }
