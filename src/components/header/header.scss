@@ -5,7 +5,7 @@
         justify-content: space-between;
         column-gap: 50px;
         padding: 30px 70px;
-        border: 1px solid #D9D9D9;
+        border: 1px solid var(--gray);
 
         @media (max-width: 768px) {
             flex-direction: column;
@@ -38,11 +38,10 @@
         font-size: 18px;
         line-height: 20px;
         font-weight: 600;
-        color: #444444;
         transition: color 0.3s;
 
         &:hover {
-            color: #B01736;
+            color: var(--red-1);
         }
 
         @media (max-width: 768px) {

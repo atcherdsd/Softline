@@ -2,8 +2,13 @@
 @use "./base/fonts" as *;
 @use "./base/colors" as *;
 
+@use '../components/ui/section-title/section-title.scss';
+@use '../components/ui/section-description/section-description.scss';
 @use '../components/header/header.scss';
 @use '../components/intro/intro.scss';
+@use '../components/map/map.scss';
+@use '../components/mission/mission.scss';
+@use '../components/business-directions/business-directions.scss';
 
 html, 
 body {
@@ -35,6 +40,11 @@ main {
 
 main {
     flex: 1;
+    padding-bottom: 67px;
+
+    @media (max-width: 768px) {
+        padding-bottom: 50px;
+    }
 }
 
 .container {

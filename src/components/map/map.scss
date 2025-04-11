@@ -1,0 +1,9 @@
+@use "../../styles/abstracts/mixins" as *;
+
+.map {
+    @include section-padding(79px);
+
+    @media (max-width: 768px) {
+        @include section-padding();
+    }
+}

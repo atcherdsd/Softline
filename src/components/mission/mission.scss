@@ -1,0 +1,21 @@
+@use "../../styles/abstracts/mixins" as *;
+
+.mission {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    min-height: 471px;
+    text-align: center;
+    background-image: url('../assets/images/bg-mission-1250.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include section-padding();
+
+    @media (max-width: 768px) {
+        row-gap: 10px;
+        min-height: 186px;
+        background-image: url('../assets/images/bg-mission-320.jpg');
+    }
+}

@@ -1,0 +1,39 @@
+.section-title {
+    font-size: 56px;
+
+    @media (max-width: 768px) {
+        font-size: 28px;
+    }
+  
+    &--white {
+        color: var(--white);
+    }
+  
+    &--black {
+        color: var(--black);
+    }
+  
+    &--red {
+        color: var(--red-1);
+    }
+  
+    &--fw-600 {
+        font-weight: 600;
+    }
+
+    &--fw-700 {
+        font-weight: 700;
+
+        @media (max-width: 768px) {
+            font-weight: 600;
+        }
+    }
+
+    &--lh-1 {
+        line-height: 1;
+    }
+  
+    &--lh-1-2 {
+        line-height: 1.2;
+    }
+}

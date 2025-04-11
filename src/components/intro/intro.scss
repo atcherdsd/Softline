@@ -1,34 +1,17 @@
+@use "../../styles/abstracts/mixins" as *;
+
 .intro {
     display: flex;
     flex-direction: column;
     row-gap: 30px;
     text-align: center;
-    padding: 79px 66px;
+
+    @include section-padding(79px, 66px, 0, 66px);
 
     @media (max-width: 768px) {
         row-gap: 10px;
         text-align: left;
-        padding: 27px 5px 50px;
-    }
 
-    &__title {
-        color: var(--red-1);
-        font-size: 56px;
-        font-weight: 700;
-
-        @media (max-width: 768px) {
-            font-size: 28px;
-            font-weight: 600;
-        }
-    }
-
-    &__text {
-        font-size: 32px;
-        font-weight: 400;
-        line-height: 120%;
-
-        @media (max-width: 768px) {
-            font-size: 16px;
-        }
+        @include section-padding(27px, 5px, 0, 5px);
     }
 }

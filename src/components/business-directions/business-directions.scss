@@ -1,0 +1,9 @@
+@use "../../styles/abstracts/mixins" as *;
+
+.business-directions {
+    @include section-padding();
+
+    @media (max-width: 768px) {
+        @include section-padding(50px, 5px, 0, 5px);
+    }
+}
