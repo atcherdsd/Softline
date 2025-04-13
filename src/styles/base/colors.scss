@@ -1,6 +1,11 @@
 :root {
     --white: #FFFFFF;
+    --true-black: #000000;
+    --true-black-0-05: #{rgba(#000000, 0.05)};
+    --true-black-0-06: #{rgba(#000000, 0.06)};
+    --true-black-0-1: #{rgba(#000000, 0.1)};
     --black: #444444;
     --gray: #D9D9D9;
     --red-1: #B01736;
+    --red-2: #A30C33;
 }

@@ -1,0 +1,45 @@
+@use '../../../styles/members' as *;
+
+.icon-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    row-gap: 10px;
+    max-width: 178px;
+
+    @media (max-width: 768px) {
+        max-width: 120px;
+    }
+
+    &--small {
+        @media (max-width: 768px) {
+            max-width: 80px;
+        }
+    }
+
+    &__circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        background-color: var(--true-black-0-05);
+
+        @media (max-width: 768px) {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    &__icon {
+        object-fit: cover;
+    }
+
+    &__info {
+        text-align: center;
+
+        @include info;
+    }
+}

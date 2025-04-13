@@ -1,4 +1,4 @@
-@use "../../../styles/abstracts/mixins" as *;
+@use '../../../styles/members' as *;
 
 .business-directions {
     @include section-padding();

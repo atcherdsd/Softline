@@ -5,8 +5,6 @@ import { defineConfig } from "eslint/config";
 export default defineConfig(
 	{
 		ignores: ['dist'],
-	},
-	{
 		files: ['**/*.js'],
 		plugins: {
 			import: eslintImport,
@@ -15,7 +13,8 @@ export default defineConfig(
 		rules: {
 			"no-debugger": "off",
 			"no-console": 0,
-			"class-methods-use-this": "off"
+			"class-methods-use-this": "off",
+			"no-unused-vars": "warn"
 		}
 	}
 );

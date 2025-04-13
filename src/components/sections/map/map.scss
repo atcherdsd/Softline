@@ -1,4 +1,4 @@
-@use "../../../styles/abstracts/mixins" as *;
+@use '../../../styles/members' as *;
 
 .map {
     @include section-padding(79px);

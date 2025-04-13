@@ -1,14 +1,17 @@
-@use "./base/reset";
-@use "./base/fonts" as *;
-@use "./base/colors" as *;
+@use './base/reset';
+@use './base/colors' as *;
+@use 'members' as *;
 
 @use '../components/ui/section-title/section-title.scss';
 @use '../components/ui/section-description/section-description.scss';
+@use '../components/ui/icon-info/icon-info.scss';
 @use '../components/common/header/header.scss';
 @use '../components/sections/intro/intro.scss';
+@use '../components/sections/numbers/numbers.scss';
 @use '../components/sections/map/map.scss';
 @use '../components/sections/mission/mission.scss';
 @use '../components/sections/business-directions/business-directions.scss';
+@use '../components/sections/benefits/benefits.scss';
 
 html, 
 body {
@@ -23,8 +26,8 @@ html {
 
 body {
     font-family: $font-proxima-family;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
     background-color: var(--white);
     color: var(--black);
     -webkit-font-smoothing: antialiased;
