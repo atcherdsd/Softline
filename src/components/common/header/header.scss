@@ -7,7 +7,7 @@
         justify-content: space-between;
         column-gap: 50px;
         padding: 30px 70px;
-        border: 1px solid var(--gray);
+        border: 1px solid var(--gray-1);
 
         @media (max-width: 768px) {
             flex-direction: column;
@@ -37,7 +37,7 @@
     }
 
     &__link {
-        transition: color 0.3s;
+        transition: color $base-transition-time;
 
         @include link;
 

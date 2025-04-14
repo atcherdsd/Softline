@@ -6,12 +6,14 @@
 @use '../components/ui/section-description/section-description.scss';
 @use '../components/ui/icon-info/icon-info.scss';
 @use '../components/common/header/header.scss';
+@use '../components/common/slider/slider.scss';
 @use '../components/sections/intro/intro.scss';
 @use '../components/sections/numbers/numbers.scss';
 @use '../components/sections/map/map.scss';
 @use '../components/sections/mission/mission.scss';
 @use '../components/sections/business-directions/business-directions.scss';
 @use '../components/sections/benefits/benefits.scss';
+@use '../components/sections/corporate-life/corporate-life.scss';
 
 html, 
 body {
