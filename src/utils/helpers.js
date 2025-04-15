@@ -10,3 +10,11 @@ export function debounce(fn, delay = 250) {
         timeout = setTimeout(() => fn.apply(this, args), delay);
     };
 }
+
+export const checkWebp = () => {
+    if (document.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp') === 0) {
+        document.documentElement.classList.add('webp');
+    } else {
+        document.documentElement.classList.add('no-webp');
+    }
+}

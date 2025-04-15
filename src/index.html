@@ -36,7 +36,7 @@
                 </section>
 
                 <section class="numbers">
-                    <div class="numbers__line numbers__line--small-gap">
+                    <div class="numbers__row numbers__row--small-gap">
                         <div class="numbers__item">
                             <div class="numbers__value">
                                 <span class="numbers__prefix">&gt;</span>
@@ -50,7 +50,7 @@
                         </div>
                     </div>
 
-                    <div class="numbers__line numbers__line--large-gap numbers__line--offset">
+                    <div class="numbers__row numbers__row--large-gap numbers__row--offset">
                         <div class="numbers__item">
                             <span class="numbers__value">25</span>
                             <span class="numbers__label numbers__label--description-mobile">городов России</span>
@@ -64,7 +64,7 @@
                         </div>
                     </div>
 
-                    <div class="numbers__line numbers__line--offset">
+                    <div class="numbers__row numbers__row--offset">
                         <div class="numbers__item">
                             <div class="numbers__value">
                                 <span>3000</span>
@@ -85,6 +85,79 @@
                 </section>
                 <section class="business-directions">
                     <h2 class="section-title section-title--black">Направления бизнеса</h2>
+                    <div class="business-directions__cards">
+
+                        <div class="business-directions__row">
+                            <div class="accordion-card accordion-card--solutions">
+                                <button class="accordion-card__button">
+                                    Решения Softline
+                                    <img class="accordion-card__icon" src="./assets/icons/accordion-arrow.svg" alt="">
+                                </button>
+                                <div class="accordion-card__content-inner">
+                                    <h3 class="accordion-card__title accordion-card__title--hidden-mobile">Решения Softline</h3>
+                                    <p class="accordion-card__description">ГК Softline предлагает клиентам собственную линейку оборудования (ПК, серверы, торговое оборудование и проч.), разработку программных продуктов, облачных решений, решений в области информационной безопасности.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-card accordion-card--cyber">
+                                <button class="accordion-card__button">
+                                    Кибербезопасность
+                                    <img class="accordion-card__icon" src="./assets/icons/accordion-arrow.svg" alt="">
+                                </button>
+                                <div class="accordion-card__content-inner">
+                                    <h3 class="accordion-card__title accordion-card__title--hidden-mobile">Кибербезопасность</h3>
+                                    <p class="accordion-card__description">Softline обладает всеми необходимыми государственными лицензиями для организации проектов по информационной безопасности и аттестации.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-card accordion-card--import">
+                                <button class="accordion-card__button">
+                                    Импортозамещение
+                                    <img class="accordion-card__icon" src="./assets/icons/accordion-arrow.svg" alt="">
+                                </button>
+                                <div class="accordion-card__content-inner">
+                                    <h3 class="accordion-card__title accordion-card__title--hidden-mobile">Импортозамещение</h3>
+                                    <p class="accordion-card__description">ГК Softline обладает широчайшим портфелем решений и услуг для импортозамещения, включая ПО и оборудование собственного производства.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-card accordion-card--cloud">
+                                <button class="accordion-card__button">
+                                    Облачные решения
+                                    <img class="accordion-card__icon" src="./assets/icons/accordion-arrow.svg" alt="">
+                                </button>
+                                <div class="accordion-card__content-inner">
+                                    <h3 class="accordion-card__title accordion-card__title--hidden-mobile">Облачные решения</h3>
+                                    <p class="accordion-card__description">Softline использует современные облачные решения как российских, так и международных вендоров для масштабирования бизнеса своих клиентов. Подписки, услуги, трансформация.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="business-directions__row business-directions__row--second">
+                            <div class="accordion-card accordion-card--dev">
+                                <button class="accordion-card__button">
+                                    Цифровая трансформация и разработка ПО
+                                    <img class="accordion-card__icon" src="./assets/icons/accordion-arrow.svg" alt="">
+                                </button>
+                                <div class="accordion-card__content-inner">
+                                    <h3 class="accordion-card__title accordion-card__title--hidden-mobile">Цифровая трансформация и разработка ПО</h3>
+                                    <p class="accordion-card__description">Softline использует современные технологи и новые возможности для увеличения производительности бизнеса заказчика. В штате ГК Softline - 2000+ разработчиков, которые трансформируют ПО под нужды конкретного предприятия.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-card accordion-card--support">
+                                <button class="accordion-card__button accordion-card__button--lh-1-1">
+                                    Техническая поддержка Softline
+                                    <img class="accordion-card__icon" src="./assets/icons/accordion-arrow.svg" alt="">
+                                </button>
+                                <div class="accordion-card__content-inner">
+                                    <h3 class="accordion-card__title accordion-card__title--lh-1-1 accordion-card__title--hidden-mobile">Техническая поддержка Softline</h3>
+                                    <p class="accordion-card__description">200+ инженеров, 24 часа в сутки, 7 дней в неделю, 12 месяцев в году, сервисное партнерство с 30+ мировыми производителями.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </section>
 
                 <section class="benefits">
@@ -163,7 +236,7 @@
                                     <source srcset="./assets/images/slides/mobile/slide1-small.webp" type="image/webp" media="(max-width: 320px)">
                                     <source srcset="./assets/images/slides/mobile/slide1-small.jpg" media="(max-width: 320px)">
                                     <source srcset="./assets/images/slides/slide1.webp" type="image/webp">
-                                    <img src="./assets/images/slides/slide1.jpg" alt="Слайд 1">
+                                    <img src="./assets/images/slides/slide1.jpg" alt="Поздравдение и награждение лучших сотрудников" loading="lazy">
                                 </picture>
                             </div>
                             <div class="corporate-life__slide swiper-slide">
@@ -171,7 +244,7 @@
                                     <source srcset="./assets/images/slides/mobile/slide2-small.webp" type="image/webp" media="(max-width: 320px)">
                                     <source srcset="./assets/images/slides/mobile/slide2-small.jpg" media="(max-width: 320px)">
                                     <source srcset="./assets/images/slides/slide2.webp" type="image/webp">
-                                    <img src="./assets/images/slides/slide2.jpg" alt="Слайд 2">
+                                    <img src="./assets/images/slides/slide2.jpg" alt="День донора" loading="lazy">
                                 </picture>
                             </div>
                             <div class="corporate-life__slide swiper-slide">
@@ -179,7 +252,7 @@
                                     <source srcset="./assets/images/slides/mobile/slide3-small.webp" type="image/webp" media="(max-width: 320px)">
                                     <source srcset="./assets/images/slides/mobile/slide3-small.jpg" media="(max-width: 320px)">
                                     <source srcset="./assets/images/slides/slide3.webp" type="image/webp">
-                                    <img src="./assets/images/slides/slide3.jpg" alt="Слайд 3">
+                                    <img src="./assets/images/slides/slide3.jpg" alt="Поддержка ЗОЖ" loading="lazy">
                                 </picture>
                             </div>
                             <div class="corporate-life__slide swiper-slide">
@@ -187,7 +260,7 @@
                                     <source srcset="./assets/images/slides/mobile/slide4-small.webp" type="image/webp" media="(max-width: 320px)">
                                     <source srcset="./assets/images/slides/mobile/slide4-small.jpg" media="(max-width: 320px)">
                                     <source srcset="./assets/images/slides/slide4.webp" type="image/webp">
-                                    <img src="./assets/images/slides/slide4.jpg" alt="Слайд 4">
+                                    <img src="./assets/images/slides/slide4.jpg" alt="Корпоративный спорт" loading="lazy">
                                 </picture>
                             </div>
                             <div class="corporate-life__slide swiper-slide">
@@ -195,7 +268,7 @@
                                     <source srcset="./assets/images/slides/mobile/slide5-small.webp" type="image/webp" media="(max-width: 320px)">
                                     <source srcset="./assets/images/slides/mobile/slide5-small.jpg" media="(max-width: 320px)">
                                     <source srcset="./assets/images/slides/slide5.webp" type="image/webp">
-                                    <img src="./assets/images/slides/slide5.jpg" alt="Слайд 5">
+                                    <img src="./assets/images/slides/slide5.jpg" alt="Фотоконкурс Арбуз-party" loading="lazy">
                                 </picture>
                             </div>
                         </div>
