@@ -63,6 +63,12 @@ export default class AccordionCard {
         this.content.style.maxHeight = '0';
     }
 
+    onDesktopResize() {
+        this.card.classList.remove('active');
+        this.card.style.height = '';
+        this.content.style.maxHeight = '';
+    }
+
     emitCloseOthers() {
         const event = new CustomEvent(AccordionCard.events.closeAllCards, {
             detail: { except: this.card },

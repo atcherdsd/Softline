@@ -29,7 +29,7 @@ export default class BusinessDirections {
 
     onResize = () => {
         if (!isMobile()) {
-            this.cards.forEach((card) => card.close());
+            this.cards.forEach((card) => card.onDesktopResize());
         }
     };
 }
