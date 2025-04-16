@@ -18,19 +18,22 @@
         }
     }
 
-    &__circle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    &__circle,
+    &__icon {
         width: 110px;
         height: 110px;
-        border-radius: 50%;
-        background-color: var(--true-black-0-05);
 
         @media (max-width: 768px) {
             width: 80px;
             height: 80px;
         }
+    }
+
+    &__circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
     }
 
     &__icon {

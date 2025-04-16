@@ -1,21 +1,19 @@
 @use '../../../styles/members' as *;
 
 .business-directions {
-    position: relative;
-    right: 5px;
-
     @include section-padding();
 
     @media (max-width: 768px) {
-        right: unset;
-
         @include section-padding(50px, 5px, 0, 5px);
     }
 
     &__cards {
+        position: relative;
+        right: 5px;
         margin-top: 55px;
 
         @media (max-width: 768px) {
+            right: unset;
             margin-top: 15px;
         }
     }

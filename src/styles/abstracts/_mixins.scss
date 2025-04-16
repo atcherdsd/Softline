@@ -48,3 +48,37 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+@mixin hiddenNativeScrollbar {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@mixin customNativeScrollBarStyle(
+    $thumbColor: --red-2,
+    $trackColor: --gray-2,
+    $size: 4px
+) {
+    // Firefox
+    @-moz-document url-prefix("") {
+        scrollbar-width: thin;
+        scrollbar-color: var($thumbColor) var($trackColor);
+    }
+
+    // Webkit (Chrome, Safari, Edge)
+    &::-webkit-scrollbar {
+        width: $size;
+        height: $size;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: var($trackColor);
+        border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var($thumbColor);
+        border-radius: 20px;
+    }
+}

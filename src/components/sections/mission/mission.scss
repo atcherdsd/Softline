@@ -3,6 +3,10 @@
 .mission {
     @include section-padding();
 
+    @media (max-width: 768px) {
+        @include section-padding(50px);
+    }
+
     &__wrapper {
         display: flex;
         flex-direction: column;

@@ -51,15 +51,21 @@
         border-radius: 50%;
         background-color: var(--gray-2);
         cursor: pointer;
+        transition: opacity $base-transition-time;
 
         &[disabled] {
             pointer-events: none;
             cursor: default;
-            opacity: 0.35;
+            opacity: 0.4;
         }
 
         &--prev {
             transform: rotate(180deg);
+        }
+
+        img {
+            height: 22px;
+            width: 13px;
         }
     }
 
@@ -75,13 +81,17 @@
             border-radius: unset;
             transition: background-color $base-transition-time;
         }
-    
+
         .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
-            background-color: var(--true-black-0-1);
+            background-color: var(--true-black-0-5);
         }
     
         .swiper-pagination-bullet-active {
             background-color: var(--red-2);
+        }
+
+        &#corporate-life-pagination .swiper-pagination-bullet {
+            margin: 0;
         }
     }
 

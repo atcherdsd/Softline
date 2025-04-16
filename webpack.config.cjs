@@ -47,17 +47,19 @@ module.exports = {
             extensions: ['js'],
             overrideConfigFile: path.resolve(__dirname, 'eslint.config.mjs'),
         }),
-        new MiniCssExtractPlugin({ 
-            filename: '[name].[contenthash].css',
-            chunkFilename: '[id].[contenthash].css'
-        })
+        ...(isDevMode
+            ? []
+            : [new MiniCssExtractPlugin({ 
+                filename: '[name].[contenthash].css',
+                chunkFilename: '[id].[contenthash].css'
+            })])
     ],
     module: {
         rules: [
             {
                 test: /\.(sa|sc|c)ss$/i,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    isDevMode ? 'style-loader' : MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader'
                 ],

@@ -21,3 +21,23 @@ $fontFiles: (
         font-display: swap;
     }
 }
+
+$font-proxima-nova-name: "ProximaNova";
+$font-proxima-nova-family: $font-proxima-nova-name, Arial, sans-serif;
+
+$fontNovaFiles: (
+    "proximanova_regular": (400),
+    "proximanova_semibold": (600)
+);
+
+@each $fileName, $weight in $fontNovaFiles {
+
+    @font-face {
+        font-family: $font-proxima-nova-name;
+        src: url('../assets/fonts/#{$fileName}.woff2') format('woff2'),
+            url('../assets/fonts/#{$fileName}.woff') format('woff');
+        font-weight: $weight;
+        font-style: normal;
+        font-display: swap;
+    }
+}

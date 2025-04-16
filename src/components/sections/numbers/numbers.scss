@@ -2,18 +2,24 @@
 
 .numbers {
     display: none;
+    
   
     @media (max-width: 768px) {
         display: flex;
         flex-direction: column;
+        align-items: center;
         row-gap: 24px;
-
+        height: 292px;
+        width: 290px;
+        margin: 0 auto;
+        
         @include section-padding(50px, 13px, 0, 13px);
     }
 
     &__row {
         display: flex;
         justify-content: center;
+        height: 60px;
 
         &--small-gap {
             column-gap: 8px;
@@ -24,7 +30,7 @@
         }
 
         &--offset {
-            padding-right: 1px;
+            padding-right: 2px;
         }
     }
 
@@ -41,6 +47,7 @@
         font-weight: 600;
         line-height: 0.8;
         color: var(--red-2);
+        opacity: 0.95;
     }
 
     &__prefix,

@@ -1,4 +1,5 @@
 @use '../abstracts/mixins' as *;
+@use './fonts' as *;
 
 @mixin heading {
     font-weight: 600;
@@ -55,4 +56,28 @@
     line-height: 1.4;
 
     @include font(17, 16);
+}
+
+@mixin text2 {
+    font-family: $font-proxima-nova-family;
+    line-height: 20px;
+    font-weight: 600;
+
+    @include font(18, 14);
+
+    @media (max-width: 768px) {
+        line-height: 1;
+    }
+}
+
+@mixin text3 {
+    font-family: $font-proxima-nova-family;
+    line-height: 20px;
+    font-weight: 400;
+
+    @include font(18, 14);
+
+    @media (max-width: 768px) {
+        line-height: 1;
+    }
 }

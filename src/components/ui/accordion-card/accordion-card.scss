@@ -117,6 +117,7 @@
         z-index: 1;
         cursor: auto;
         padding: 28px 20px;
+        overflow: hidden;
         transition: 
             opacity $base-transition-time,
             visibility $base-transition-time,
@@ -132,13 +133,30 @@
             height: 60px;
             background-color: transparent;
             cursor: pointer;
-            padding: 20px 10px;
+            padding: 21px 10px 20px;
         }
 
         &--lh-1-1 {
             @media (max-width: 768px) {
                 line-height: 1.1;
             }
+        }
+
+        &--padding-small {
+            padding: 16px 20px;
+
+            @media (max-width: 768px) {
+                padding: 20px 10px;
+            }
+        }
+    }
+
+    &__button-value {
+        display: block;
+        max-width: 356px;
+
+        @media (max-width: 768px) {
+            max-width: none;
         }
     }
 
@@ -171,10 +189,6 @@
         }
     }
 
-    &__description {
-        @include text1;
-    }
-
     &.active &__button {
         height: 50px;
         padding-bottom: 10px;
@@ -190,6 +204,7 @@
     }
 
     &__title {
+        max-width: 365px;
         padding-bottom: 20px;
 
         @media (max-width: 768px) {
@@ -199,5 +214,11 @@
         &--lh-1-1 {
             line-height: 1.1;
         }
+    }
+
+    &__description {
+        max-width: 480px;
+        
+        @include text1;
     }
 }

@@ -1,6 +1,8 @@
 @use '../../../styles/members' as *;
 
-.section-title {  
+.section-title {
+    text-align: center;
+
     @include heading;
 
     &--white {
@@ -25,5 +27,15 @@
   
     &--lh-1-2 {
         line-height: 1.2;
+    }
+
+    &--ta-left {
+        text-align: left;
+    }
+
+    &--ta-left-mobile {
+        @media (max-width: 768px) {
+            text-align: left;
+        }
     }
 }

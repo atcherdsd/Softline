@@ -6,14 +6,14 @@
         align-items: center;
         justify-content: space-between;
         column-gap: 50px;
-        padding: 30px 70px;
+        padding: 29px 70px;
         border: 1px solid var(--gray-1);
 
         @media (max-width: 768px) {
             flex-direction: column;
             align-items: flex-start;
             row-gap: 16px;
-            padding: 16px 5px;
+            padding: 15px 4px;
         }
     }
 
@@ -30,6 +30,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
+        line-height: 1;
 
         @media (max-width: 768px) {
             gap: 5px 10px;
@@ -37,6 +38,7 @@
     }
 
     &__link {
+        display: block;
         transition: color $base-transition-time;
 
         @include link;
