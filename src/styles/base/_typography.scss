@@ -1,0 +1,83 @@
+@use '../abstracts/mixins' as *;
+@use './fonts' as *;
+
+@mixin heading {
+    font-weight: 600;
+    line-height: 1;
+
+    @include font(56, 28);
+}
+
+@mixin subheading {
+    font-weight: 600;
+    line-height: 1.2;
+
+    @include font(40, 22);
+}
+
+@mixin heading-card {
+    font-weight: 600;
+    line-height: 1;
+
+    @include font(24, 20);
+}
+
+@mixin link {
+    font-weight: 600;
+    
+    @include font(20, 16, 'line-height');
+    @include font(18, 14);
+}
+
+@mixin description {
+    font-weight: 400;
+    line-height: 1.2;
+
+    @include font(32, 16);
+}
+
+@mixin description-mobile {
+    @include description;
+
+    @media (max-width: 768px) {
+        line-height: 1.5;
+    }
+}
+
+@mixin info {
+    font-weight: 400;
+    line-height: 1.1;
+
+    @include font(18, 16);
+}
+
+@mixin text1 {
+    font-weight: 400;
+    line-height: 1.4;
+
+    @include font(17, 16);
+}
+
+@mixin text2 {
+    font-family: $font-proxima-nova-family;
+    line-height: 20px;
+    font-weight: 600;
+
+    @include font(18, 14);
+
+    @media (max-width: 768px) {
+        line-height: 1;
+    }
+}
+
+@mixin text3 {
+    font-family: $font-proxima-nova-family;
+    line-height: 20px;
+    font-weight: 400;
+
+    @include font(18, 14);
+
+    @media (max-width: 768px) {
+        line-height: 1;
+    }
+}

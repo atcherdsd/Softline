@@ -1,0 +1,323 @@
+@use '../../../styles/members' as *;
+
+.map {
+    @include section-padding(79px);
+
+    @media (max-width: 768px) {
+        height: 519px;
+
+        @include section-padding(50px);
+    }
+
+    &__tabs-container {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        column-gap: 25px;
+        align-items: center;
+        padding: 0 70px;
+        box-shadow: 0px 0px 40px 0px var(--true-black-0-06);
+
+        @media (max-width: 1250px) {
+            padding: 0 20px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 18px 0 0 5px;
+        }
+    }
+
+    &__title {
+        @include heading-card;
+
+        @media (max-width: 768px) {
+            padding-top: 1px;
+        }
+    }
+
+    &__toggle-button {
+        display: flex;
+        column-gap: 16px;
+        padding: 28px 0;
+        overflow: hidden;
+
+        @media (max-width: 768px) {
+            column-gap: 4px;
+            padding: 0;
+        }
+    }
+
+    &__toggle-button-icon {
+        width: 24px;
+        height: 24px;
+        transition: transform $middle-transition-time;
+        stroke-width: 3px;
+
+        @media (max-width: 768px) {
+            height: 20px;
+            stroke-width: 2px;
+            scale: 1.2;
+        }
+
+        &.opened {
+            transform: rotateX(180deg);
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 30px;
+        overflow: auto;
+
+        @media (max-width: 768px) {
+            min-width: 270px;
+            padding-right: 5px;
+            column-gap: 16px;
+        }
+
+        &.hidden {
+            display: none;
+        }
+    }
+
+    &__tab {
+        min-width: fit-content;
+        padding: 30px 0 27px;
+
+        @include link;
+
+        @media (max-width: 768px) {
+            padding: 20px 0;
+        }
+
+        &[disabled] {
+            opacity: 0.1;
+            cursor: auto;
+        }
+    }
+
+    &__cities-panel {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0px 0px 32px 0px var(--true-black-0-06);
+        padding: 30px 0;
+        z-index: 10;
+        background-color: var(--white);
+        transition: 
+            visibility $base-transition-time,
+            opacity $base-transition-time;
+
+        @media (max-width: 768px) {
+            position: relative;
+            top: 0;
+            padding: 15px 5px 10px;
+            box-shadow: none;
+
+            &.hidden {
+                position: absolute;
+                top: 39px;
+                left: 5px;
+            }
+        }
+
+        &.hidden {
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+    }
+
+    &__cities-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 24px;
+        width: 100%;
+        max-height: 212px;
+        padding: 0 68px;
+
+        @media (max-width: 1250px) {
+            overflow: auto;
+
+            @include customNativeScrollBarStyle;
+        }
+
+        @media (max-width: 768px) {
+            display: grid;
+            grid-template-columns: 53px 40px 111px;
+            max-height: none;
+            padding: 0;
+            gap: 5px 14px;
+        }
+    }
+
+    &__cities-group {
+        min-width: fit-content;
+
+        &:nth-child(7) {
+            width: 116px;
+        }
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__cities-region,
+    &__city {
+        text-align: left;
+    }
+
+    &__cities-region {
+        margin-bottom: 8px;
+
+        @include text2;
+
+        @media (max-width: 768px) {
+            display: flex;
+            align-items: baseline;
+            column-gap: 3px;
+            width: min-content;
+        }
+
+        img {
+            display: none;
+
+            @media (max-width: 768px) {
+                display: block;
+                width: 8px;
+                height: 5px;
+                transition: transform $middle-transition-time;
+            }
+
+            &.opened {
+                transform: rotateX(180deg);
+            }
+        }
+        
+    }
+
+    &__cities-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        line-height: 1;
+
+        @media (max-width: 768px) {
+            height: 0;
+            display: none;
+            padding-bottom: 10px;
+        }
+
+        &.opened {
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            height: auto;
+        }
+    }
+
+    &__city {
+        @include text3;
+    }
+
+    &__tab,
+    &__cities-region,
+    &__city {
+        border-bottom: 3px solid transparent;
+        transition: 
+            color $base-transition-time,
+            border-bottom-color $base-transition-time;
+
+        @include hover {
+            color: var(--red-2);
+        }
+
+        @media (max-width: 768px) {
+            border-bottom-width: 2px;
+        }
+    }
+    
+
+    &__tab.active,
+    &__cities-region.active,
+    &__city.active {
+        color: var(--red-2);
+        border-bottom-color: var(--red-2);
+    }
+
+    &__cities-region[data-filter-type="region"].active {
+        @media (max-width: 768px) {
+            border-bottom-color: transparent;
+        }
+    }
+
+    &__map-container {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1190 / 604;
+        padding: 90px 30px 0;
+        height: 694px;
+        overflow: auto;
+
+        @include customNativeScrollBarStyle;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        svg {
+            display: block;
+            width: 100%;
+            height: 604px;
+            width: 1190px;
+
+            @media (max-width: 1280px) {
+                height: 600px;
+            }
+        }
+    }
+
+    &__map-container-mobile {
+        display: none;
+
+        @media (max-width: 768px) {
+            display: block;
+            padding: 8px 0 0;
+            overflow: auto;
+            max-height: 366px;
+            aspect-ratio: unset;
+        }
+
+        svg {
+            display: block;
+            width: 100%;
+
+            @media (max-width: 768px) {
+                position: relative;
+                right: 6px;
+                min-width: 862px;
+                max-height: 445px;
+            }
+        }
+    }
+
+    circle, 
+    path[data-city-label] {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+    
+    circle.visible,
+    path[data-city-label].visible {
+        opacity: 1;
+        pointer-events: auto;
+    }    
+}

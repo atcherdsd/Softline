@@ -1,0 +1,17 @@
+@use '../../../styles/members' as *;
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    text-align: center;
+
+    @include section-padding(79px, 66px, 0, 74px);
+
+    @media (max-width: 768px) {
+        row-gap: 10px;
+        text-align: left;
+
+        @include section-padding(27px, 5px, 0, 5px);
+    }
+}

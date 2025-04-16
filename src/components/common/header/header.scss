@@ -1,0 +1,50 @@
+@use '../../../styles/members' as *;
+
+.header {
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 50px;
+        padding: 29px 70px;
+        border: 1px solid var(--gray-1);
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 16px;
+            padding: 15px 4px;
+        }
+    }
+
+    &__logo {
+        flex-shrink: 0;
+
+        img {
+            width: 125px;
+            height: 25px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        line-height: 1;
+
+        @media (max-width: 768px) {
+            gap: 5px 10px;
+        }
+    }
+
+    &__link {
+        display: block;
+        transition: color $base-transition-time;
+
+        @include link;
+
+        @include hover {
+            color: var(--red-1);
+        }
+    }
+}

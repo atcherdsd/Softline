@@ -1,0 +1,41 @@
+@use '../../../styles/members' as *;
+
+.section-title {
+    text-align: center;
+
+    @include heading;
+
+    &--white {
+        color: var(--white);
+    }
+  
+    &--black {
+        color: var(--black);
+    }
+  
+    &--red {
+        color: var(--red-1);
+    }
+
+    &--fw-700 {
+        font-weight: 700;
+
+        @media (max-width: 768px) {
+            font-weight: 600;
+        }
+    }
+  
+    &--lh-1-2 {
+        line-height: 1.2;
+    }
+
+    &--ta-left {
+        text-align: left;
+    }
+
+    &--ta-left-mobile {
+        @media (max-width: 768px) {
+            text-align: left;
+        }
+    }
+}

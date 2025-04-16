@@ -1,0 +1,104 @@
+@use '../../../styles/members' as *;
+
+.corporate-life {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 
+        opacity $long-transition-time ease, 
+        transform $long-transition-time ease;
+
+    @include section-padding(100px, 70px, 0, 70px);
+
+    @media (max-width: 768px) {
+        @include section-padding(50px, 5px, 0, 5px);
+    }
+
+    &--visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &__slider.swiper {
+        position: static;
+    }
+
+    &__slider {
+        margin-top: 55px;
+
+        @media (max-width: 768px) {
+            margin-top: 15px;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        column-gap: 20px;
+        top: 100px;
+        right: 70px;
+        height: 56px;
+        width: 132px;
+    }
+
+    &__button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        background-color: var(--gray-2);
+        cursor: pointer;
+        transition: opacity $base-transition-time;
+
+        &[disabled] {
+            pointer-events: none;
+            cursor: default;
+            opacity: 0.4;
+        }
+
+        &--prev {
+            transform: rotate(180deg);
+        }
+
+        img {
+            height: 22px;
+            width: 13px;
+        }
+    }
+
+    &__pagination {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 10px;
+        margin-top: 28px;
+
+        .swiper-pagination-bullet {
+            flex: 1;
+            height: 6px;
+            border-radius: unset;
+            transition: background-color $base-transition-time;
+        }
+
+        .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+            background-color: var(--true-black-0-5);
+        }
+    
+        .swiper-pagination-bullet-active {
+            background-color: var(--red-2);
+        }
+
+        &#corporate-life-pagination .swiper-pagination-bullet {
+            margin: 0;
+        }
+    }
+
+    &__nav,
+    &__pagination {
+        @media (max-width: 1279px) {
+            display: none;
+        }
+    }
+}

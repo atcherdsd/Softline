@@ -1,0 +1,17 @@
+@use '../../../styles/members' as *;
+
+.section-description {
+    @include description;
+
+    &--white {
+        color: var(--white);
+    }
+  
+    &--lh-1-5 {
+        line-height: 1.5;
+
+        @media (max-width: 768px) {
+            line-height: 1.3;
+        }
+    }
+}

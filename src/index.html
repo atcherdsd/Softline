@@ -9,5 +9,406 @@
         <link rel="icon" href="./assets/favicon.ico">
     </head>
     <body>
+        <header class="header">
+            <div class="container">
+                <div class="header__container">
+                    <a href="/" class="header__logo">
+                        <img src="./assets/icons/logo.svg" alt="Softline" width="125" height="25">
+                    </a>
+    
+                    <nav class="header__nav">
+                        <ul class="header__menu">
+                            <li><a class="header__link" href="#">Облачные решения</a></li>
+                            <li><a class="header__link" href="#">Кибербезопасность</a></li>
+                            <li><a class="header__link" href="#">Импортозамещение</a></li>
+                            <li><a class="header__link" href="#">Цифровая трансформация</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="container">
+                <section class="intro">
+                    <h1 class="section-title section-title--red section-title--fw-700 section-title--lh-1-2 section-title--ta-left-mobile">Softline</h1>
+                    <p class="section-description">Ведущий поставщик IT-решений и сервисов.* Мы предлагаем комплексные IT-решения, облака, программное и аппаратное обеспечение, решения по цифровой трансформации и кибербезопасности, а также широкий спектр IT-услуг.</p>
+                </section>
+
+                <section class="numbers">
+                    <div class="numbers__row numbers__row--small-gap">
+                        <div class="numbers__item">
+                            <div class="numbers__value">
+                                <span class="numbers__prefix">&gt;</span>
+                                <span>30 лет</span>
+                            </div>
+                            <span class="numbers__label numbers__label--description-mobile">на IT-рынке</span>
+                        </div>
+                        <div class="numbers__item">
+                            <span class="numbers__value">4600</span>
+                            <span class="numbers__label numbers__label--description-mobile">сотрудников в России</span>
+                        </div>
+                    </div>
+
+                    <div class="numbers__row numbers__row--large-gap numbers__row--offset">
+                        <div class="numbers__item">
+                            <span class="numbers__value">25</span>
+                            <span class="numbers__label numbers__label--description-mobile">городов России</span>
+                        </div>
+                        <div class="numbers__item">
+                            <div class="numbers__value">
+                                <span>2000</span>
+                                <span class="numbers__postfix">+</span>
+                            </div>
+                            <span class="numbers__label numbers__label--description-mobile">разработчиков</span>
+                        </div>
+                    </div>
+
+                    <div class="numbers__row numbers__row--offset">
+                        <div class="numbers__item">
+                            <div class="numbers__value">
+                                <span>3000</span>
+                                <span class="numbers__postfix">+</span>
+                            </div>
+                            <span class="numbers__label section-description">сотрудников ежегодно проходят оценку и обучение</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="map">
+                    <div class="map__tabs-container">
+                        <h2 class="map__title">
+                            <button class="map__toggle-button">
+                                <span class="map__toggle-button-value">Офисы Softline</span>
+                                <svg class="map__toggle-button-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.10156 7.99683L12.1016 16.0179L22.1016 7.99683" stroke="#444444"/>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div class="map__tabs" role="tablist">
+                            <button class="map__tab" role="tab" data-filter="all" data-filter-type="region">Все</button>
+                            <button class="map__tab" role="tab" data-filter="moscow" data-filter-type="city">Москва</button>
+                            <button class="map__tab" role="tab" data-filter="center" data-filter-type="region">Центр</button>
+                            <button class="map__tab" role="tab" data-filter="northwest" data-filter-type="region">Северо-Запад</button>
+                            <button class="map__tab" role="tab" data-filter="south" data-filter-type="region">Юг</button>
+                            <button class="map__tab" role="tab" data-filter="volga" data-filter-type="region">Волга</button>
+                            <button class="map__tab" role="tab" data-filter="ural" data-filter-type="region">Урал</button>
+                            <button class="map__tab" role="tab" data-filter="siberia" data-filter-type="region">Сибирь</button>
+                            <button class="map__tab" role="tab" data-filter="far-east" data-filter-type="region">Дальний Восток</button>
+                        </div>
+                        <div class="map__cities-panel hidden" role="tablist">
+                            <div class="map__cities-container">
+                                <button class="map__cities-region" role="tab" data-filter="moscow" data-filter-type="city">
+                                    <span>Москва</span>
+                                </button>
+
+                                <div class="map__cities-group">
+                                    <button class="map__cities-region" role="tab" data-filter="center" data-filter-type="region">
+                                        <span>Центр</span>
+                                        <img src="./assets/icons/triangular-arrow.svg" alt="" width="8px" height="5px">
+                                    </button>
+                                    <ul class="map__cities-list">
+                                        <li><button class="map__city" role="tab" data-filter="voronezh" data-filter-type="city">Воронеж</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="yaroslavl" data-filter-type="city">Ярославль</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="belgorod" data-filter-type="city">Белгород</button></li>
+                                    </ul>
+                                </div>
+
+                                <div class="map__cities-group">
+                                    <button class="map__cities-region" role="tab" data-filter="northwest" data-filter-type="region">
+                                        <span>Северо-Запад</span>
+                                        <img src="./assets/icons/triangular-arrow.svg" alt="" width="8px" height="5px">
+                                    </button>
+                                    <ul class="map__cities-list">
+                                        <li><button class="map__city" role="tab" data-filter="saintPetersburg" data-filter-type="city">Санкт-Петербург</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="kaliningrad" data-filter-type="city">Калининград</button></li>
+                                    </ul>
+                                </div>
+
+                                <div class="map__cities-group">
+                                    <button class="map__cities-region" role="tab" data-filter="south" data-filter-type="region">
+                                        <span>Юг</span>
+                                        <img src="./assets/icons/triangular-arrow.svg" alt="" width="8px" height="5px">
+                                    </button>
+                                    <ul class="map__cities-list">
+                                        <li><button class="map__city" role="tab" data-filter="rostovOnDon" data-filter-type="city">Ростов-на-Дону</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="krasnodar" data-filter-type="city">Краснодар</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="volgograd" data-filter-type="city">Волгоград</button></li>
+                                    </ul>
+                                </div>
+
+                                <div class="map__cities-group">
+                                    <button class="map__cities-region" role="tab" data-filter="volga" data-filter-type="region">
+                                        <span>Волга</span>
+                                        <img src="./assets/icons/triangular-arrow.svg" alt="" width="8px" height="5px">
+                                    </button>
+                                    <ul class="map__cities-list">
+                                        <li><button class="map__city" role="tab" data-filter="kazan" data-filter-type="city">Казань</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="samara" data-filter-type="city">Самара</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="ufa" data-filter-type="city">Уфа</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="orenburg" data-filter-type="city">Оренбург</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="nizhnyNovgorod" data-filter-type="city">Нижний Новгород</button></li>
+                                    </ul>
+                                </div>
+
+                                <div class="map__cities-group">
+                                    <button class="map__cities-region" role="tab" data-filter="ural" data-filter-type="region">
+                                        <span>Урал</span>
+                                        <img src="./assets/icons/triangular-arrow.svg" alt="" width="8px" height="5px">
+                                    </button>
+                                    <ul class="map__cities-list">
+                                        <li><button class="map__city" role="tab" data-filter="ekaterinburg" data-filter-type="city">Екатеринбург</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="chelyabinsk" data-filter-type="city">Челябинск</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="perm" data-filter-type="city">Пермь</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="surgut" data-filter-type="city">Сургут</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="tyumen" data-filter-type="city">Тюмень</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="izhevsk" data-filter-type="city">Ижевск</button></li>
+                                    </ul>
+                                </div>
+
+                                <div class="map__cities-group">
+                                    <button class="map__cities-region" role="tab" data-filter="siberia" data-filter-type="region">
+                                        <span>Сибирь</span>
+                                        <img src="./assets/icons/triangular-arrow.svg" alt="" width="8px" height="5px">
+                                    </button>
+                                    <ul class="map__cities-list">
+                                        <li><button class="map__city" role="tab" data-filter="novosibirsk" data-filter-type="city">Новосибирск</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="omsk" data-filter-type="city">Омск</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="tomsk" data-filter-type="city">Томск</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="krasnoyarsk" data-filter-type="city">Красноярск</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="irkutsk" data-filter-type="city">Иркутск</button></li>
+                                    </ul>
+                                </div>
+
+                                <div class="map__cities-group">
+                                    <button class="map__cities-region" role="tab" data-filter="far-east" data-filter-type="region">
+                                        <span>Дальний Восток</span>
+                                        <img src="./assets/icons/triangular-arrow.svg" alt="" width="8px" height="5px">
+                                    </button>
+                                    <ul class="map__cities-list">
+                                        <li><button class="map__city" role="tab" data-filter="khabarovsk" data-filter-type="city">Хабаровск</button></li>
+                                        <li><button class="map__city" role="tab" data-filter="vladivostok" data-filter-type="city">Владивосток</button></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                      
+                    <div class="map__map-container"></div>
+                    <div class="map__map-container-mobile"></div>
+                </section>
+
+                <section class="mission">
+                    <div class="mission__wrapper">
+                        <h2 class="section-title section-title--white">Миссия Softline</h2>
+                        <p class="section-description section-description--white section-description--lh-1-5">Мы помогаем организациям трансформироваться, работать эффективно и безопасно в условиях цифровой экономики.</p>
+                    </div>
+                </section>
+
+                <section class="business-directions">
+                    <h2 class="section-title section-title--black">Направления бизнеса</h2>
+                    <div class="business-directions__cards">
+
+                        <div class="business-directions__row">
+                            <div class="accordion-card accordion-card--solutions">
+                                <button class="accordion-card__button">
+                                    <span class="accordion-card__button-value">Решения Softline</span>
+                                    <img class="accordion-card__icon" src="./assets/icons/accordion-arrow.svg" alt="" width="36px" height="36px">
+                                </button>
+                                <div class="accordion-card__content-inner">
+                                    <h3 class="accordion-card__title accordion-card__title--hidden-mobile">Решения Softline</h3>
+                                    <p class="accordion-card__description">ГК Softline предлагает клиентам собственную линейку оборудования (ПК, серверы, торговое оборудование и проч.), разработку программных продуктов, облачных решений, решений в области информационной безопасности.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-card accordion-card--cyber">
+                                <button class="accordion-card__button">
+                                    <span class="accordion-card__button-value">Кибербезопасность</span>
+                                    <img class="accordion-card__icon" src="./assets/icons/accordion-arrow.svg" alt="" width="36px" height="36px">
+                                </button>
+                                <div class="accordion-card__content-inner">
+                                    <h3 class="accordion-card__title accordion-card__title--hidden-mobile">Кибербезопасность</h3>
+                                    <p class="accordion-card__description">Softline обладает всеми необходимыми государственными лицензиями для организации проектов по информационной безопасности и аттестации.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-card accordion-card--import">
+                                <button class="accordion-card__button">
+                                    <span class="accordion-card__button-value">Импортозамещение</span>
+                                    <img class="accordion-card__icon" src="./assets/icons/accordion-arrow.svg" alt="" width="36px" height="36px">
+                                </button>
+                                <div class="accordion-card__content-inner">
+                                    <h3 class="accordion-card__title accordion-card__title--hidden-mobile">Импортозамещение</h3>
+                                    <p class="accordion-card__description">ГК Softline обладает широчайшим портфелем решений и услуг для импортозамещения, включая ПО и оборудование собственного производства.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-card accordion-card--cloud">
+                                <button class="accordion-card__button">
+                                    <span class="accordion-card__button-value">Облачные решения</span>
+                                    <img class="accordion-card__icon" src="./assets/icons/accordion-arrow.svg" alt="" width="36px" height="36px">
+                                </button>
+                                <div class="accordion-card__content-inner">
+                                    <h3 class="accordion-card__title accordion-card__title--hidden-mobile">Облачные решения</h3>
+                                    <p class="accordion-card__description">Softline использует современные облачные решения как российских, так и международных вендоров для масштабирования бизнеса своих клиентов. Подписки, услуги, трансформация.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="business-directions__row business-directions__row--second">
+                            <div class="accordion-card accordion-card--dev">
+                                <button class="accordion-card__button accordion-card__button--padding-small">
+                                    <span class="accordion-card__button-value">Цифровая трансформация и&nbsp;разработка ПО</span>
+                                    <img class="accordion-card__icon" src="./assets/icons/accordion-arrow.svg" alt="" width="36px" height="36px">
+                                </button>
+                                <div class="accordion-card__content-inner">
+                                    <h3 class="accordion-card__title accordion-card__title--hidden-mobile">Цифровая трансформация и&nbsp;разработка ПО</h3>
+                                    <p class="accordion-card__description">Softline использует современные технологи и новые возможности для увеличения производительности бизнеса заказчика. В штате ГК Softline - 2000+ разработчиков, которые трансформируют ПО под нужды конкретного предприятия.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-card accordion-card--support">
+                                <button class="accordion-card__button accordion-card__button--lh-1-1">
+                                    <span class="accordion-card__button-value">Техническая поддержка Softline</span>
+                                    <img class="accordion-card__icon" src="./assets/icons/accordion-arrow.svg" alt="" width="36px" height="36px">
+                                </button>
+                                <div class="accordion-card__content-inner">
+                                    <h3 class="accordion-card__title accordion-card__title--lh-1-1 accordion-card__title--hidden-mobile">Техническая поддержка Softline</h3>
+                                    <p class="accordion-card__description">200+ инженеров, 24 часа в сутки, 7 дней в неделю, 12 месяцев в году, сервисное партнерство с 30+ мировыми производителями.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+
+                <section class="benefits">
+                    <div class="benefits__wrapper">
+                        <div class="benefits__base">
+                            <h2 class="section-title section-title--black">Компенсационный пакет</h2>
+                            <div class="benefits__items">
+                                <div class="icon-info">
+                                    <div class="icon-info__circle">
+                                        <img class="icon-info__icon" src="./assets/icons/dms.svg" alt="ДМС" width="110" height="110">
+                                    </div>
+                                    <div class="icon-info__info">ДМС</div>
+                                </div>
+                                <div class="icon-info">
+                                    <div class="icon-info__circle">
+                                        <img class="icon-info__icon" src="./assets/icons/birthday.svg" alt="День рождения" width="110" height="110">
+                                    </div>
+                                    <div class="icon-info__info">Выходной в день рождения</div>
+                                </div>
+                                <div class="icon-info">
+                                    <div class="icon-info__circle">
+                                        <img class="icon-info__icon" src="./assets/icons/mobile.svg" alt="Мобильная связь" width="110" height="110">
+                                    </div>
+                                    <div class="icon-info__info">Корпоративная мобильная связь</div>
+                                </div>
+                                <div class="icon-info">
+                                    <div class="icon-info__circle">
+                                        <img class="icon-info__icon" src="./assets/icons/sport.svg" alt="Спорт" width="110" height="110">
+                                    </div>
+                                    <div class="icon-info__info">Корпоративные скидки на спорт</div>
+                                </div>
+                                <div class="icon-info">
+                                    <div class="icon-info__circle">
+                                        <img class="icon-info__icon" src="./assets/icons/lti.svg" alt="LTI" width="110" height="110">
+                                    </div>
+                                    <div class="icon-info__info">LTI</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="benefits__extra">
+                            <h3 class="benefits__extra-heading">
+                                <span class="benefits__extra-heading-item">Программа дополнительной мотивации</span>
+                                <span class="benefits__extra-heading-item benefits__extra-heading-item--red">доплата 12% от суммы</span>
+                            </h3>
+                            <div class="benefits__items benefits__items--large-gap">
+                                <div class="icon-info icon-info--small">
+                                    <div class="icon-info__circle">
+                                        <img class="icon-info__icon" src="./assets/icons/equipment.svg" alt="Оргтехника" width="110" height="110">
+                                    </div>
+                                    <div class="icon-info__info">Оргтехники</div>
+                                </div>
+                                <div class="icon-info icon-info--small">
+                                    <div class="icon-info__circle">
+                                        <img class="icon-info__icon" src="./assets/icons/dms.svg" alt="ДМС" width="110" height="110">
+                                    </div>
+                                    <div class="icon-info__info">ДМС</div>
+                                </div>
+                                <div class="icon-info icon-info--small">
+                                    <div class="icon-info__circle">
+                                        <img class="icon-info__icon" src="./assets/icons/hypothec.svg" alt="Ипотека" width="110" height="110">
+                                    </div>
+                                    <div class="icon-info__info">Ипотеки</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="corporate-life">
+                    <h2 class="section-title section-title--black section-title--fw-600 section-title--ta-left">Корпоративная жизнь</h2>
+                    <div class="corporate-life__slider swiper">
+                        <div class="corporate-life__wrapper swiper-wrapper">
+                            <div class="corporate-life__slide swiper-slide">
+                                <picture>
+                                    <source srcset="./assets/images/slides/mobile/slide1-small.webp" type="image/webp" media="(max-width: 320px)">
+                                    <source srcset="./assets/images/slides/mobile/slide1-small.jpg" media="(max-width: 320px)">
+                                    <source srcset="./assets/images/slides/slide1.webp" type="image/webp">
+                                    <img src="./assets/images/slides/slide1.jpg" alt="Поздравдение и награждение лучших сотрудников" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="corporate-life__slide swiper-slide">
+                                <picture>
+                                    <source srcset="./assets/images/slides/mobile/slide2-small.webp" type="image/webp" media="(max-width: 320px)">
+                                    <source srcset="./assets/images/slides/mobile/slide2-small.jpg" media="(max-width: 320px)">
+                                    <source srcset="./assets/images/slides/slide2.webp" type="image/webp">
+                                    <img src="./assets/images/slides/slide2.jpg" alt="День донора" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="corporate-life__slide swiper-slide">
+                                <picture>
+                                    <source srcset="./assets/images/slides/mobile/slide3-small.webp" type="image/webp" media="(max-width: 320px)">
+                                    <source srcset="./assets/images/slides/mobile/slide3-small.jpg" media="(max-width: 320px)">
+                                    <source srcset="./assets/images/slides/slide3.webp" type="image/webp">
+                                    <img src="./assets/images/slides/slide3.jpg" alt="Поддержка ЗОЖ" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="corporate-life__slide swiper-slide">
+                                <picture>
+                                    <source srcset="./assets/images/slides/mobile/slide4-small.webp" type="image/webp" media="(max-width: 320px)">
+                                    <source srcset="./assets/images/slides/mobile/slide4-small.jpg" media="(max-width: 320px)">
+                                    <source srcset="./assets/images/slides/slide4.webp" type="image/webp">
+                                    <img src="./assets/images/slides/slide4.jpg" alt="Корпоративный спорт" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="corporate-life__slide swiper-slide">
+                                <picture>
+                                    <source srcset="./assets/images/slides/mobile/slide5-small.webp" type="image/webp" media="(max-width: 320px)">
+                                    <source srcset="./assets/images/slides/mobile/slide5-small.jpg" media="(max-width: 320px)">
+                                    <source srcset="./assets/images/slides/slide5.webp" type="image/webp">
+                                    <img src="./assets/images/slides/slide5.jpg" alt="Фотоконкурс Арбуз-party" loading="lazy">
+                                </picture>
+                            </div>
+                        </div>
+
+                        <div class="corporate-life__nav">
+                            <button class="corporate-life__button corporate-life__button--prev">
+                                <img src="./assets/icons/slider-arrow.svg" alt="Стрелка назад" height="22px" width="13px">
+                            </button>
+                            <button class="corporate-life__button corporate-life__button--next">
+                                <img src="./assets/icons/slider-arrow.svg" alt="Стрелка вперед" height="22px" width="13px">
+                            </button>
+                        </div>
+                      
+                        <div id="corporate-life-pagination" class="corporate-life__pagination"></div>
+                    </div>
+                </section>
+            </div>
+        </main>
     </body>
 </html>

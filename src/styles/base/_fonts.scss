@@ -4,21 +4,38 @@ $font-proxima-name: "ProximaNovaCondensed";
 $font-proxima-family: $font-proxima-name, Arial, sans-serif;
 
 $fontFiles: (
-    "proximanovacond_regular": (400, 'ttf'),
-    "proximanovacond_bold": (700, 'ttf'),
-    "proximanovacond_boldit": (700, 'otf'),
-    "proximanovacond_black": (900, 'otf'),
-    "proximanovacond_blackit": (900, 'otf'),
+    "proximanovacond_regular": (400),
+    "proximanovacond_semibold": (600),
+    "proximanovacond_bold": (700),
+    "proximanovacond_black": (900),
 );
 
-@each $fileName, $details in $fontFiles {
-    $weight: list.nth($details, 1);
-    $format: list.nth($details, 2);
+@each $fileName, $weight in $fontFiles {
 
     @font-face {
         font-family: $font-proxima-name;
-        src: 
-            url('../assets/fonts/#{$fileName}.#{$format}') format('#{$format}');
+        src: url('../assets/fonts/#{$fileName}.woff2') format('woff2'),
+            url('../assets/fonts/#{$fileName}.woff') format('woff');
+        font-weight: $weight;
+        font-style: normal;
+        font-display: swap;
+    }
+}
+
+$font-proxima-nova-name: "ProximaNova";
+$font-proxima-nova-family: $font-proxima-nova-name, Arial, sans-serif;
+
+$fontNovaFiles: (
+    "proximanova_regular": (400),
+    "proximanova_semibold": (600)
+);
+
+@each $fileName, $weight in $fontNovaFiles {
+
+    @font-face {
+        font-family: $font-proxima-nova-name;
+        src: url('../assets/fonts/#{$fileName}.woff2') format('woff2'),
+            url('../assets/fonts/#{$fileName}.woff') format('woff');
         font-weight: $weight;
         font-style: normal;
         font-display: swap;

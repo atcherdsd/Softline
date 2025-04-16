@@ -1,0 +1,39 @@
+@use '../../../styles/members' as *;
+
+.business-directions {
+    @include section-padding();
+
+    @media (max-width: 768px) {
+        @include section-padding(50px, 5px, 0, 5px);
+    }
+
+    &__cards {
+        position: relative;
+        right: 5px;
+        margin-top: 55px;
+
+        @media (max-width: 768px) {
+            right: unset;
+            margin-top: 15px;
+        }
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px 20px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        &--second {
+            margin-top: 23px;
+
+            @media (max-width: 768px) {
+                margin-top: 10px;
+            }
+        }
+    }
+}
