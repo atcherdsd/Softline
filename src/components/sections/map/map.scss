@@ -1,6 +1,8 @@
 @use '../../../styles/members' as *;
 
 .map {
+    position: relative;
+
     @include section-padding(79px);
 
     @media (max-width: 768px) {
@@ -75,10 +77,6 @@
             min-width: 270px;
             padding-right: 5px;
             column-gap: 16px;
-        }
-
-        &.hidden {
-            display: none;
         }
     }
 
@@ -255,6 +253,22 @@
     &__cities-region[data-filter-type="region"].active {
         @media (max-width: 768px) {
             border-bottom-color: transparent;
+        }
+    }
+
+    &__map-wrapper {
+        transition: opacity $base-transition-time;
+
+        &.faded {
+            opacity: 0.3;
+
+            @media (max-width: 768px) {
+                position: absolute;
+                top: 147px;
+                right: 0;
+                left: 0;
+                bottom: 0;
+            }
         }
     }
 

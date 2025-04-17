@@ -15,8 +15,6 @@ export default class MapComponent {
         this.toggleButton = this.controlsContainer.querySelector('.map__toggle-button');
         this.toggleButton?.addEventListener('click', this.toggleControlPanel);
 
-        this.tabsContainer = this.controlsContainer.querySelector('.map__tabs');
-
         this.tabs = this.controlsContainer.querySelectorAll('.map__tab');
         this.controlPanel = this.controlsContainer.querySelector('.map__cities-panel');
         this.controlPanelRegionButtons = this.controlPanel.querySelectorAll('.map__cities-region');
@@ -222,7 +220,7 @@ export default class MapComponent {
 
             this.closeAllRegionButtons();
             this.activeRegionButton = null;
-            isMobile() ? this.toggleTabsContainer() : this.toggleTabs();
+            this.toggleTabs();
         }
     }
 
@@ -237,13 +235,8 @@ export default class MapComponent {
                 this.closeAllRegionButtons();
                 this.activeRegionButton = null;
             }
-            
-            isMobile() ? this.toggleTabsContainer() : this.toggleTabs();
+            this.toggleTabs();
         }
-    }
-
-    toggleTabsContainer() {
-        this.tabsContainer?.classList[this.isOpenedPanel ? 'add' : 'remove']('hidden');
     }
 
     toggleTabs() {
@@ -254,6 +247,7 @@ export default class MapComponent {
                     tab.removeAttribute('disabled');
             })
         }
+        this.svgRoot.closest('.map__map-wrapper').classList[this.isOpenedPanel ? 'add' : 'remove']('faded');
     }
 
     toggleButtonIcon() {
