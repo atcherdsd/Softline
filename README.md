@@ -1,3 +1,3 @@
 # Softline
 
-Deploy - https://atcherdsd.github.io/softline/
+Deploy - https://atcherdsd.github.io/Softline/
